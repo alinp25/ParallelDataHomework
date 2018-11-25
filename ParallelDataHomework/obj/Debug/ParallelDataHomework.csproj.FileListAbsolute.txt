@@ -1,0 +1,7 @@
+A:\Programming\ParallelDataHomework\ParallelDataHomework\bin\Debug\ParallelDataHomework.exe.config
+A:\Programming\ParallelDataHomework\ParallelDataHomework\bin\Debug\ParallelDataHomework.exe
+A:\Programming\ParallelDataHomework\ParallelDataHomework\bin\Debug\ParallelDataHomework.pdb
+A:\Programming\ParallelDataHomework\ParallelDataHomework\obj\Debug\ParallelDataHomework.csprojAssemblyReference.cache
+A:\Programming\ParallelDataHomework\ParallelDataHomework\obj\Debug\ParallelDataHomework.csproj.CoreCompileInputs.cache
+A:\Programming\ParallelDataHomework\ParallelDataHomework\obj\Debug\ParallelDataHomework.exe
+A:\Programming\ParallelDataHomework\ParallelDataHomework\obj\Debug\ParallelDataHomework.pdb
