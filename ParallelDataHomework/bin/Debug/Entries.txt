@@ -1,0 +1,18 @@
+1
+Utilizatori 2 8
+Name Marcel
+Age 17
+Location Bucharest
+Street Florilor
+University ACS
+Nationality Romanian
+Language Romanian
+Height 1.78
+Name Ron
+Age 21
+Location Pitesti
+Street Eroilor
+University UPIT
+Nationality English
+Language Romanian
+Height 1.82
