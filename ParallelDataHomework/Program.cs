@@ -33,20 +33,36 @@ namespace ParallelDataHomework {
                                 .Last().Trim(' ').Split(new string[] { "FROM" }, StringSplitOptions.None).First().Trim(' ');
                     var TableToSearch = Input.Split(new string[] { "FROM" }, StringSplitOptions.None).Last().Trim(' ');
                     Console.WriteLine("Table: {0}", TableToSearch);
-                    Console.WriteLine("------------------");
-                    foreach (var Item in Database[TableToSearch].Columns) {
-                        Console.Write("{0} ", Item);
-                    }
-                    Console.WriteLine();
-                    Console.WriteLine("------------------");
                     if (Columns == "*") {
+                        Console.WriteLine("------------------");
+                        foreach (var Item in Database[TableToSearch].Columns) {
+                            Console.Write("{0} ", Item);
+                        }
+                        Console.WriteLine();
+                        Console.WriteLine("------------------");
                         foreach (System.Data.DataRow Row in Database[TableToSearch].Rows) {
                             foreach (var Item in Row.ItemArray) {
                                 Console.Write("{0} ", Item);
                             }
                             Console.WriteLine();
                         }
-                        break;
+                    } else {
+                        var SplittedColumns = Columns.Split(',');
+                        Parallel.ForEach(SplittedColumns, (x) => {
+                            x = x.Trim(' ');
+                        });
+                        Console.WriteLine("------------------");
+                        foreach (var Item in Database[TableToSearch].Columns) {
+                            Console.Write("{0} ", Item);
+                        }
+                        Console.WriteLine();
+                        Console.WriteLine("------------------");
+                        foreach (System.Data.DataRow Row in Database[TableToSearch].Rows) {
+                            foreach(var Col in SplittedColumns) {
+                                Console.Write("{0} ", Row[Col]);
+                            }
+                            Console.WriteLine();
+                        }
                     }
                 }
             } while (Input != "EXIT");
